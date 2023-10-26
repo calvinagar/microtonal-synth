@@ -33,9 +33,13 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
 
-      - name: Where are we
-        run: ls -la
-
+      - name: The stuff
+        run: |
+          cd web
+          npm i
+          npm run prod
+          ls -la
+          
       - name: Move to /web folder
         run: cd web      
       
