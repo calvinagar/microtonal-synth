@@ -40,9 +40,6 @@ jobs:
           npm run prod
           ls -la
           
-      - name: Move to /web folder
-        run: cd web      
-      
       - name: Where are we
         run: ls -la
         
@@ -73,6 +70,9 @@ jobs:
         
     - name: Set up Pages
       uses: actions/configure-pages@v2
+
+    - name: Where are we
+      run: ls -la
       
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v1

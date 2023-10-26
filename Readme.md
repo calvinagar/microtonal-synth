@@ -1,4 +1,4 @@
-# Microtonality
+# Microtonal Synthesizer
 
 ## Getting Started
 

@@ -1,9 +1,9 @@
 {
-  "name": "Microtonality",
+  "name": "microtonal-synth",
   "version": "1.0.0",
   "description": "A Microtonal Synthesizer",
   "main": "index.js",
-  "homepage": "https://microtonality.net",
+  "homepage": "https://https://calvinagar.github.io/Microtonal-Synthesizer",
   "scripts": {
     "start": "webpack serve",
     "build": "webpack build --mode development",
@@ -12,7 +12,7 @@
     "wp-start": "webpack serve",
     "prod": "webpack build --mode production"
   },
-  "author": "UCF CS Senior Design Team, Spring 2023",
+  "author": "UCF CS Senior Design Team, Spring 2023. Forked by Calvin Agar",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.19.3",
