@@ -20,6 +20,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Where are we
+        run: ls -la
+
       # steps for building the project
       - name: Checkout
         uses: actions/checkout@v3
@@ -29,7 +32,10 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
-          
+
+      - name: Where are we
+        run: ls -la
+
       - name: Move to /web folder
         run: cd web      
       
