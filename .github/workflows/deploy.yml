@@ -43,17 +43,11 @@ jobs:
       - name: Where are we
         run: ls -la
         
-      - name: Install dependencies
-        run: npm i
-        
-      - name: Build Production
-        run: npm run prod
-        
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
-          path: /web/dist
+          path: ./web/dist
           
   deploy:
     needs: build
