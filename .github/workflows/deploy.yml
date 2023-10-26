@@ -31,7 +31,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
           
       - name: Move to /web folder
-        run: cd web
+        run: cd web      
+      
+      - name: Where are we
+        run: ls -la
         
       - name: Install dependencies
         run: npm i
