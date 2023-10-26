@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Where are we
-        run: ls -la
+        run: ls -la ..
 
       # steps for building the project
       - name: Checkout
