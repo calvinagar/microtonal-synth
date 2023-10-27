@@ -1,5 +1,4 @@
-dist
-web/build
+web/dist
 node_modules
-.idea/
+.idea
 .DS_Store
