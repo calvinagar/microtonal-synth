@@ -20,44 +20,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Where are we
-        run: ls -la ..
-
-      # steps for building the project
       - name: Checkout
         uses: actions/checkout@v3
         
-      - name: Set up Node
+      - name: Set up node
         uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
 
-      - name: The stuff
+      - name: Build production artifact
         run: |
           cd web
           npm i
           npm run prod
           ls -la
           
-      - name: Where are we
-        run: ls -la
-        
-      - name: Upload build artifact
+      - name: Upload production artifact
         uses: actions/upload-artifact@v3
         with:
-          name: build-artifact
+          name: prod-artifact
           path: ./web/dist
 
-      - uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
-          path: path/to/artifact
-          
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: path/to/artifact
-          
+
   deploy:
     needs: build
     environment:
@@ -65,19 +50,15 @@ jobs:
       url: ${{steps.deployment.outputs.page_url}}
     runs-on: ubuntu-latest
     steps:
-      # steps for deploying the project to Github Pages
-    - name: Download build artifact
+    - name: Download production artifact
       uses: actions/download-artifact@v3
       with:
-        name: build-artifact
+        name: prod-artifact
         
-    - name: Set up Pages
+    - name: Set up Github Pages
       uses: actions/configure-pages@v2
 
-    - name: Where are we
-      run: ls -la
-      
-    - name: Upload Pages artifact
+    - name: Upload Github Pages artifact
       uses: actions/upload-pages-artifact@v1
       with:
         path: .
