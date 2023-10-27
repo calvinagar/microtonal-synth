@@ -48,6 +48,15 @@ jobs:
         with:
           name: build-artifact
           path: ./web/dist
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: path/to/artifact
+          
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: path/to/artifact
           
   deploy:
     needs: build
