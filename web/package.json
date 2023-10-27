@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Microtonal Synthesizer",
   "main": "index.js",
-  "homepage": "https://calvinagar.github.io/microtonal-synth/",
+  "homepage": "https://calvinagar.github.io/microtonal-synth/#",
   "scripts": {
     "start": "webpack serve",
     "build": "webpack build --mode development",
@@ -29,6 +29,7 @@
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
