@@ -12,21 +12,21 @@ import PlayProvider from "./pages/play/PlayProvider";
 import {ReactJSXElement} from "@emotion/react/types/jsx-namespace";
 
 export default function App(): ReactJSXElement {
-  return (
-      <PlayProvider>
-          <HashRouter>
-              <Routes>
-                  <Route path='/' element={<Layout />}>
-                      <Route index element={<Splash />}/>
-                      <Route path="learn" element={<Learn />}/>
-                      <Route path="play" element={<Play />}/>
-                      <Route path="download" element={<Download />}/>
-                      <Route path="contact" element={<Contact />}/>
-                  </Route>
-              </Routes>
-          </HashRouter>
-      </PlayProvider>
-  );
+    return (
+        <PlayProvider>
+            <HashRouter>
+                <Routes>
+                    <Route path='/' element={<Layout />}>
+                        <Route index element={<Splash />}/>
+                        <Route path="learn" element={<Learn />}/>
+                        <Route path="play" element={<Play />}/>
+                        <Route path="download" element={<Download />}/>
+                        <Route path="contact" element={<Contact />}/>
+                    </Route>
+                </Routes>
+            </HashRouter>
+        </PlayProvider>
+    );
 }
 
 const Layout = (): ReactJSXElement => {
