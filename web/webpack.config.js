@@ -9,8 +9,7 @@ const tailwindConfig = require("./tailwind.config")
 
 module.exports = (env, options) => {
     const isDevelopment = options.mode !== 'production';
-    // const isGHActions = process.env.GITHUB_ACTIONS === "true";
-    const publicPath = "/microtonal-synth/"; // : "/";
+    const publicPath = isDevelopment ? "/" : "/microtonal-synth/";
     return {
         mode: isDevelopment ? "development" : "production",
         entry: {
